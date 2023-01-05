@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+  user-select: none;
+}
+
+body {
+  background: #292c2e;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.user {
+  border-radius: 15px;
+  border: 1px solid rgb(88, 64, 199);
+  background-color: rgb(14, 6, 48);
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+
+  color: white;
+  text-decoration: none;
+}
+
+.user:hover {
+  background: #000;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+.link {
+  text-align: center;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+
+}
+
+.divider {
+  display: block;
+  margin: 2rem 0 0 0;
+}
+
+.link.active {
+  background-color: black;
+  transform: scale(1.2);
+  transition: .3s ease;
+}
+
+.card>img {
+  width: 200px;
+
+}
+
+.container {
+  margin-top: 2rem;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.container form.mt {
+  margin: 2rem 0 0 0;
+}
+
+.container form input {
+  padding: .8rem;
+  font-size: 1.2rem;
+}
+
+.container button {
+  padding: .5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 250px;
+}
