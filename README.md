@@ -2,6 +2,7 @@
 
 This time, we are going to learn how to use React Query as a state management. 🧐
 
+![cover](./src/assets/cover.png)
 
 &nbsp;
 
