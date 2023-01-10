@@ -1,4 +1,3 @@
-import { useRef } from 'react'
 import { useCreateUser } from '../hook/useUser'
 
 export const CreateUser = () => {

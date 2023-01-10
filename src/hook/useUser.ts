@@ -1,10 +1,10 @@
 
 import { QueryObserver, useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
-import { getUsers, createUser, deleteUser, editUser } from '../api/user';
+import { createUser, deleteUser, editUser, getUsers } from '../api/user';
 import { User } from '../interface';
 
-const key = 'character'
+const key = 'users'
 
 export const useEditUser = () => {
     const queryClient = useQueryClient();
@@ -55,7 +55,6 @@ export const useDeleteUser = () => {
     });
 }
 
-
 export const useGetUsers = () => {
     return useQuery([key], getUsers);
 }
@@ -66,28 +65,24 @@ export const useGetUsersObserver = () => {
 
     const queryClient = useQueryClient()
 
-    const [faqs, setFaqs] = useState<User[]>(() => {
+    const [users, setUsers] = useState<User[]>(() => {
         // get data from cache
         const data = queryClient.getQueryData<User[]>([key])
         return data ?? []
     })
 
-
     useEffect(() => {
         const observer = new QueryObserver<User[]>(queryClient, { queryKey: [key] })
 
         const unsubscribe = observer.subscribe(result => {
-            if (result.data) setFaqs(result.data)
+            if (result.data) setUsers(result.data)
         })
 
-        return () => {
-            unsubscribe()
-            setFaqs(get_users.data || [])
-        }
+        return () => { unsubscribe() }
     }, [])
 
     return {
         ...get_users,
-        data: faqs,
+        data: users,
     }
 }
