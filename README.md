@@ -51,9 +51,9 @@ This time, we are going to learn how to use React Query as a state management. �
 
 ### Here's the link to the tutorial in case you'd like to take a look at it! eyes 👀
 
-- 🇲🇽 🔗 
+- 🇲🇽 🔗 https://dev.to/franklin030601/administrando-el-estado-con-react-query-2b2j
 
-- 🇺🇲 🔗 
+- 🇺🇲 🔗 https://dev.to/franklin030601/managing-state-with-react-query-1842
 
 
 &nbsp;
